@@ -33,5 +33,4 @@ app.post("/payments/create", async (request, response) => {
   });
 });
 
-//-listen
 exports.api = functions.https.onRequest(app);

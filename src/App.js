@@ -1,5 +1,6 @@
 import "./App.css";
 import Header from "./Header";
+import Footer from "./Footer";
 import Home from "./Home";
 import Checkout from "./Checkout";
 import Login from "./Login";
@@ -60,6 +61,7 @@ function App() {
           <Route path="/">
             <Header />
             <Home />
+            <Footer />
           </Route>
         </Switch>
       </div>

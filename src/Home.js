@@ -1,19 +1,47 @@
 import React from "react";
 import "./Home.css";
 import Product from "./Product";
+import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 function Home() {
   return (
     <div className="home">
       <div className="home_container">
-        <img
-          className="home_image"
-          src="https://images-eu.ssl-images-amazon.com/images/G/02/digital/video/merch2016/Hero/Covid19/Generic/GWBleedingHero_ENG_COVIDUPDATE__XSite_1500x600_PV_en-GB._CB428684220_.jpg"
-          alt=""
-        />
+        <div className="carousel-wrapper home_image">
+          <Carousel
+            showThumbs={false}
+            showIndicators={false}
+            infiniteLoop
+            autoPlay
+          >
+            <div>
+              <img
+                className="home_image"
+                src="https://images-eu.ssl-images-amazon.com/images/G/02/digital/video/merch2016/Hero/Covid19/Generic/GWBleedingHero_ENG_COVIDUPDATE__XSite_1500x600_PV_en-GB._CB428684220_.jpg"
+                alt=""
+              />
+            </div>
+            <div>
+              <img
+                className="home_image"
+                src="https://images-eu.ssl-images-amazon.com/images/G/31/img21/Wireless/WLA/July/Headsets/OnePlusBudsPro/Intrigue/Ingress/P50167046_ConfidentialWLA_OnePlus_Buds_Pro_Tall_hero_1500x600._CB663475496_.jpg"
+                alt=""
+              />
+            </div>
+            <div>
+              <img
+                className="home_image"
+                src="https://images-eu.ssl-images-amazon.com/images/G/31/img19/AmazonPay/Avatar/HeroPC_1500x600_SVA._CB667240774_.jpg"
+                alt=""
+              />
+            </div>
+          </Carousel>
+        </div>
+
         <div className="home_row">
           <Product
             id="12321341"
-            title="The lean startup"
+            title="The lean startup:How Today's Entrepreneurs Use Continuous Innovation to Create Radically Successful Businesses"
             price={19.11}
             image="https://images-na.ssl-images-amazon.com/images/I/51Zymoq7UnL._SX325_BO1,204,203,200_.jpg"
             rating={3}
